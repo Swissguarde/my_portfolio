@@ -5,7 +5,7 @@ import Header from "../components/Header";
 
 const Home: NextPage = () => {
   return (
-    <div className="relative">
+    <div>
       <Head>
         <title>Kolade Ayomide</title>
         <link rel="icon" href="/favicon.ico" />
