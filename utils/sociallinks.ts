@@ -22,3 +22,25 @@ export const SOCIAL_LINKS = [
     link: "/",
   },
 ];
+
+export const LANGS = [
+  {
+    title: "JavaScript (ES6+)",
+  },
+  {
+    title: "React",
+  },
+
+  {
+    title: "Typescript",
+  },
+  {
+    title: "Next.js",
+  },
+  {
+    title: "Firebase",
+  },
+  {
+    title: "Sanity CMS",
+  },
+];

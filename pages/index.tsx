@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useSelector } from "react-redux";
+import About from "../components/About";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Socials from "../components/Socials";
@@ -24,6 +25,7 @@ const Home: NextPage = () => {
       >
         <Hero />
         <Socials />
+        <About />
       </main>
     </div>
   );

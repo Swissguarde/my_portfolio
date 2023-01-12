@@ -39,3 +39,23 @@ export const heroVariants = {
     },
   },
 };
+export const aboutVariants = {
+  hidden: {
+    opacity: 0,
+    y: -70,
+    transition: {
+      type: "spring",
+      stiffness: 300,
+      damping: 140,
+    },
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 80,
+      delay: 0.5,
+    },
+  },
+};

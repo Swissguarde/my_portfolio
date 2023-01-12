@@ -15,6 +15,7 @@ body {
 .mono-font {
   font-family: "Nova Mono", monospace;
 }
+
 @layer base {
   body {
     @apply !scrollbar-thin !scrollbar-track-transparent !scrollbar-thumb-custom-slate;
