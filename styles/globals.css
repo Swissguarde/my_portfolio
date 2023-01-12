@@ -8,6 +8,10 @@ body {
   background-color: #0a192f;
   font-family: "Poppins", sans-serif;
 }
+.blurs > *:not(.menu) {
+  filter: blur(4px);
+  transition: 0.7s ease-out;
+}
 .mono-font {
   font-family: "Nova Mono", monospace;
 }

@@ -6,12 +6,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import { navLinks } from "../utils/navlinks";
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleNav, selectNavState } from "../redux/navbarSlice";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const isOpen = useSelector(selectNavState);
   const [scroll, setScroll] = useState<boolean>(false);
-  const [isOpen, setIsOpen] = useState(false);
   const toggleNavbar = () => {
-    setIsOpen((prev) => !prev);
+    dispatch(toggleNav());
   };
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +39,7 @@ const Header = () => {
         whileInView="show"
         className={`${
           scroll && " shadow-lg"
-        } fixed top-0 z-[70] flex w-full items-center justify-between bg-[#0a192f] py-5 px-[25px] sm:px-[50px]`}
+        } fixed top-0 z-[60] flex w-full items-center justify-between bg-navy bg-opacity-70 py-5 px-[25px] backdrop-blur-md sm:px-[50px]`}
       >
         <div>
           <Link
@@ -82,14 +85,14 @@ const Header = () => {
                 ease: "easeOut",
               }}
             >
-              <button className="inline-block w-max rounded border border-[#64ffda] bg-transparent px-3 py-2 text-sm text-[#64ffda] transition-all hover:bg-[#57cbff]/10">
+              <button className="w-max rounded border border-[#64ffda] bg-transparent px-3 py-2 text-sm text-[#64ffda] transition-all hover:bg-[#57cbff]/10">
                 Resume
               </button>
             </motion.li>
           </motion.ul>
         </div>
 
-        <button className="md:hidden" onClick={toggleNavbar}>
+        <button className="z-[100] md:hidden" onClick={toggleNavbar}>
           <AnimatePresence>
             {isOpen ? (
               <motion.div
@@ -112,30 +115,30 @@ const Header = () => {
             )}
           </AnimatePresence>
         </button>
-      </motion.header>
 
-      <div
-        className={`fixed top-0 right-0 z-50 flex h-[100vh] w-[70%] flex-col items-center justify-center space-y-6 bg-light-navy text-white shadow-lg duration-700  md:hidden ${
-          isOpen ? "right-0" : "right-[-100vw]"
-        }`}
-      >
-        {navLinks.map((navlink, index) => {
-          const { id, title, to } = navlink;
-          return (
-            <Link
-              key={index}
-              href={to}
-              className="link flex flex-col items-center text-base"
-            >
-              <span className="mono-font text-[#64ffda]">{id}.</span>
-              <h2 className="mb-2">{title}</h2>
-            </Link>
-          );
-        })}
-        <button className="w-max rounded border border-[#64ffda] bg-transparent px-10 py-3 text-base text-[#64ffda] transition-all hover:bg-[#57cbff]/10">
-          Resume
-        </button>
-      </div>
+        <div
+          className={`fixed top-0 right-0 z-40 flex h-[100vh] w-[70%] flex-col items-center justify-center space-y-6 bg-light-navy text-white shadow-2xl duration-700  md:hidden ${
+            isOpen ? "right-0" : "right-[-100vw]"
+          }`}
+        >
+          {navLinks.map((navlink, index) => {
+            const { id, title, to } = navlink;
+            return (
+              <Link
+                key={index}
+                href={to}
+                className="link flex flex-col items-center text-base"
+              >
+                <span className="mono-font text-[#64ffda]">{id}.</span>
+                <h2 className="mb-2">{title}</h2>
+              </Link>
+            );
+          })}
+          <button className="w-max rounded border border-[#64ffda] bg-transparent px-10 py-3 text-base text-[#64ffda] transition-all hover:bg-[#57cbff]/10">
+            Resume
+          </button>
+        </div>
+      </motion.header>
     </>
   );
 };
