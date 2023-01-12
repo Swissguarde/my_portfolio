@@ -17,8 +17,11 @@ module.exports = {
       colors: {
         "light-slate": "#a8b2d1",
         "lightest-slate": "#ccd6f6",
+        "light-navy": "#112240",
+        "light-teal": "#64ffda",
+        "custom-slate": "#8892b0",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
 };

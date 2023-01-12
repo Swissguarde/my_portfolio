@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
+import Socials from "../components/Socials";
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +13,10 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="px-[25px] pb-[2000px] sm:px-[50px]"></main>
+      <main className="relative px-[25px] pb-[2000px] sm:px-[50px]">
+        <Hero />
+        <Socials />
+      </main>
     </div>
   );
 };

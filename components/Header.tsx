@@ -36,14 +36,14 @@ const Header = () => {
         whileInView="show"
         className={`${
           scroll && " shadow-lg"
-        } fixed top-0 z-50 flex w-full items-center justify-between py-5 px-[25px] sm:px-[50px]`}
+        } fixed top-0 z-[70] flex w-full items-center justify-between bg-[#0a192f] py-5 px-[25px] sm:px-[50px]`}
       >
         <div>
           <Link
             href="/"
             className="text-lightest-slate transition duration-300 hover:text-light-slate"
           >
-            <IoLogoAngular size={40} />
+            <IoLogoAngular color="#64ffda" size={40} />
           </Link>
         </div>
 
@@ -115,7 +115,7 @@ const Header = () => {
       </motion.header>
 
       <div
-        className={`fixed top-0 right-0 flex h-[100vh] w-[70%] flex-col items-center justify-center space-y-6 bg-light-navy text-white shadow-lg duration-700  md:hidden ${
+        className={`fixed top-0 right-0 z-50 flex h-[100vh] w-[70%] flex-col items-center justify-center space-y-6 bg-light-navy text-white shadow-lg duration-700  md:hidden ${
           isOpen ? "right-0" : "right-[-100vw]"
         }`}
       >
@@ -132,7 +132,7 @@ const Header = () => {
             </Link>
           );
         })}
-        <button className="inline-block w-max rounded border border-[#64ffda] bg-transparent px-10 py-3 text-base text-[#64ffda] transition-all hover:bg-[#57cbff]/10">
+        <button className="w-max rounded border border-[#64ffda] bg-transparent px-10 py-3 text-base text-[#64ffda] transition-all hover:bg-[#57cbff]/10">
           Resume
         </button>
       </div>
