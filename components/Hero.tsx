@@ -73,9 +73,14 @@ const Hero = () => {
           ease: "easeInOut",
         }}
       >
-        <button className="w-max rounded border border-[#64ffda] bg-transparent px-14 py-3 text-base text-[#64ffda] transition-all hover:bg-[#57cbff]/10 lg:px-16">
+        <a
+          href="mailto:ayomikolade2003@gmail.com"
+          target={"_blank"}
+          rel="noreferrer"
+          className="w-max rounded border border-[#64ffda] bg-transparent px-14 py-3 text-base text-[#64ffda] transition-all hover:bg-[#57cbff]/10 lg:px-16"
+        >
           Contact Me!
-        </button>
+        </a>
       </motion.div>
     </motion.div>
   );
