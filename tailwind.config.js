@@ -20,6 +20,7 @@ module.exports = {
         "light-navy": "#112240",
         "light-teal": "#64ffda",
         "custom-slate": "#8892b0",
+        "desc-text": "#a8b2d1",
       },
     },
   },

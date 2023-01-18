@@ -129,12 +129,12 @@ const Header = () => {
                 href={to}
                 className="link flex flex-col items-center text-base"
               >
-                <span className="mono-font text-[#64ffda]">{id}.</span>
+                <span className="mono-font text-light-teal">{id}.</span>
                 <h2 className="mb-2">{title}</h2>
               </Link>
             );
           })}
-          <button className="w-max rounded border border-[#64ffda] bg-transparent px-10 py-3 text-base text-[#64ffda] transition-all hover:bg-[#57cbff]/10">
+          <button className="w-max rounded border border-light-teal bg-transparent px-10 py-3 text-base text-light-teal transition-all hover:bg-[#57cbff]/10">
             Resume
           </button>
         </div>
