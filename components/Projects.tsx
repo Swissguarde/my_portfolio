@@ -1,6 +1,8 @@
 import { urlFor } from "../sanity";
 import { FiGithub } from "react-icons/fi";
 import { RxExternalLink } from "react-icons/rx";
+import { motion } from "framer-motion";
+import { projectVariants } from "../utils/motion";
 
 interface Props {
   projects: Project[];
@@ -11,7 +13,7 @@ interface IProps {
 
 const Projects = ({ projects }: Props) => {
   return (
-    <div className="mt-56 text-custom-slate md:mt-64 md:pl-10 lg:pl-36">
+    <motion.div className="mt-56 text-custom-slate md:mt-64 md:pl-10 lg:pl-36">
       <div className="flex items-center text-2xl md:text-3xl">
         <div className="spanLink mono-font mr-3 text-xl lg:mr-4">02.</div>
         <div className="font-semibold">Some Projects I've Built</div>
@@ -22,7 +24,7 @@ const Projects = ({ projects }: Props) => {
 
       <div className="mt-16">
         <div>
-          {projects.slice(0, 4).map((project) => {
+          {projects.slice(0, 5).map((project) => {
             const {
               _id,
               description,
@@ -36,7 +38,12 @@ const Projects = ({ projects }: Props) => {
               stack_d,
             } = project;
             return (
-              <div key={_id}>
+              <motion.div
+                variants={projectVariants}
+                initial="hidden"
+                whileInView="show"
+                key={_id}
+              >
                 <div className="relative mb-40 hidden w-full grid-cols-1 gap-16 md:grid-cols-2 lg:grid">
                   <section className="rounded-l-full bg-teal-700">
                     <a target={"_blank"} href={live} rel="noreferrer">
@@ -146,12 +153,12 @@ const Projects = ({ projects }: Props) => {
                     </div>
                   </section>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default Projects;
