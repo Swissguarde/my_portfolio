@@ -16,7 +16,6 @@ interface Props {
 }
 
 const Home = ({ projects }: Props) => {
-  console.log(projects);
   const isOpen = useSelector(selectNavState);
 
   return (
@@ -28,9 +27,7 @@ const Home = ({ projects }: Props) => {
 
       <Header />
       <main
-        className={`${
-          isOpen && "blurs fixed"
-        } px-[25px] pb-[2000px] sm:px-[50px]`}
+        className={`${isOpen && "blurs fixed"} px-[25px] pb-40 sm:px-[50px]`}
       >
         <Hero />
         <Socials />

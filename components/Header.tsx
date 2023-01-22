@@ -1,7 +1,9 @@
 import { IoLogoAngular } from "react-icons/io";
 import { AiOutlineBars } from "react-icons/ai";
+import { FiGithub } from "react-icons/fi";
 import { RxCross1 } from "react-icons/rx";
 import Link from "next/link";
+import { Link as ScrollLink } from "react-scroll";
 import { AnimatePresence, motion } from "framer-motion";
 import { navVariants } from "../utils/motion";
 import { navLinks } from "../utils/navlinks";
@@ -69,12 +71,27 @@ const Header = () => {
                   }}
                   key={index}
                 >
-                  <Link href={to} className="link">
+                  <ScrollLink
+                    to={to}
+                    smooth={true}
+                    offset={-100}
+                    spy={true}
+                    className="link"
+                  >
                     <span className="spanLink mono-font">{id}.</span> {title}
-                  </Link>
+                  </ScrollLink>
                 </motion.li>
               );
             })}
+            <Link
+              href="https://github.com/swissguarde"
+              className="link flex items-center"
+            >
+              <span className="mr-1 text-light-teal">
+                <FiGithub />
+              </span>{" "}
+              GitHub
+            </Link>
 
             <motion.li
               initial={{ y: -20, opacity: 0 }}
@@ -124,16 +141,29 @@ const Header = () => {
           {navLinks.map((navlink, index) => {
             const { id, title, to } = navlink;
             return (
-              <Link
+              <ScrollLink
+                onClick={toggleNavbar}
                 key={index}
-                href={to}
+                to={to}
+                smooth={true}
+                offset={-70}
+                spy={true}
                 className="link flex flex-col items-center text-base"
               >
                 <span className="mono-font text-light-teal">{id}.</span>
                 <h2 className="mb-2">{title}</h2>
-              </Link>
+              </ScrollLink>
             );
           })}
+          <Link
+            className="link flex flex-col items-center text-base"
+            href="https://github.com/swissguarde"
+          >
+            <span className="text-light-teal">
+              <FiGithub />
+            </span>
+            GitHub
+          </Link>
           <button className="w-max rounded border border-light-teal bg-transparent px-10 py-3 text-base text-light-teal transition-all hover:bg-[#57cbff]/10">
             Resume
           </button>

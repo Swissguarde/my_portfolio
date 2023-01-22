@@ -10,6 +10,7 @@ const About = () => {
       initial="hidden"
       whileInView="show"
       className="mt-56 text-custom-slate md:mt-64 md:pl-10 lg:pl-36"
+      id="about"
     >
       <div className="flex items-center text-2xl md:text-3xl">
         <div className="spanLink mono-font mr-3 text-xl lg:mr-4">01.</div>
@@ -38,7 +39,7 @@ const About = () => {
             Here are a few technologies I’ve worked with:
             <div className="flex items-center space-x-6 md:space-x-16">
               <div className="mt-6 flex flex-col text-xs text-light-slate md:text-sm">
-                {LANGS.slice(0, 3).map((lang, index) => (
+                {LANGS.slice(0, 4).map((lang, index) => (
                   <div key={index} className="mb-2 flex items-center">
                     <span className="mr-2">
                       <TfiControlForward />
@@ -48,7 +49,7 @@ const About = () => {
                 ))}
               </div>
               <div className="mt-6 flex flex-col text-xs text-light-slate md:text-sm">
-                {LANGS.slice(3, 6).map((lang, index) => (
+                {LANGS.slice(4, 8).map((lang, index) => (
                   <div key={index} className="mb-2 flex items-center">
                     <span className="mr-2">
                       <TfiControlForward />

@@ -8,6 +8,7 @@ const Contact = () => {
       initial="hidden"
       whileInView="show"
       className="mt-32"
+      id="contact"
     >
       <div className="flex items-center justify-center text-light-teal">
         <div className="spanLink mono-font">03.</div>

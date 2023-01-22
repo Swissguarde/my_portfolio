@@ -13,7 +13,10 @@ interface IProps {
 
 const Projects = ({ projects }: Props) => {
   return (
-    <motion.div className="mt-56 text-custom-slate md:mt-64 md:pl-10 lg:pl-36">
+    <motion.div
+      id="work"
+      className="mt-56 text-custom-slate md:mt-64 md:pl-10 lg:pl-36"
+    >
       <div className="flex items-center text-2xl md:text-3xl">
         <div className="spanLink mono-font mr-3 text-xl lg:mr-4">02.</div>
         <div className="font-semibold">Some Projects I've Built</div>

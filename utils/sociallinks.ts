@@ -43,4 +43,10 @@ export const LANGS = [
   {
     title: "Sanity CMS",
   },
+  {
+    title: "GitHub",
+  },
+  {
+    title: "jQuery",
+  },
 ];

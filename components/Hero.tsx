@@ -7,7 +7,7 @@ const Hero = () => {
       variants={heroVariants}
       initial="hidden"
       whileInView="show"
-      className="mt-44  text-light-teal md:pl-10 lg:pl-36"
+      className="mt-44 text-light-teal md:pl-10 lg:pl-36"
     >
       <div>
         <motion.h2
@@ -58,7 +58,7 @@ const Hero = () => {
         }}
         className="mt-7 text-custom-slate sm:max-w-md lg:max-w-lg"
       >
-        I’m a frontend developer specializing in building exceptional digital
+        I’m a software developer specializing in building exceptional digital
         experiences. I work closely with back-end developers and designers to
         ensure that the final product is visually appealing and user-friendly.
       </motion.div>
