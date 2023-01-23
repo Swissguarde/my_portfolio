@@ -3,7 +3,6 @@ import Head from "next/head";
 import { useSelector } from "react-redux";
 import About from "../components/About";
 import Contact from "../components/Contact";
-import Extras from "../components/Extras";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
@@ -33,7 +32,6 @@ const Home = ({ projects }: Props) => {
         <Socials />
         <About />
         <Projects projects={projects} />
-        {/* <Extras projects={projects} /> */}
         <Contact />
       </main>
     </div>
