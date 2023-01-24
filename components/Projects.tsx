@@ -19,7 +19,7 @@ const Projects = ({ projects }: Props) => {
     >
       <div className="flex items-center text-2xl md:text-3xl">
         <div className="spanLink mono-font mr-3 text-xl lg:mr-4">02.</div>
-        <div className="font-semibold">Some Projects I've Built</div>
+        <div className="font-semibold">Some Projects I&apos;ve Built</div>
         <div>
           <hr className="ml-6 w-14 border border-gray-400 md:w-44" />
         </div>
