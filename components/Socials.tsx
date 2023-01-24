@@ -10,7 +10,7 @@ const Socials = () => {
         duration: 0.7,
         ease: "easeInOut",
       }}
-      className="fixed left-[50px] -bottom-1 hidden text-custom-slate lg:block"
+      className="fixed left-[50px] -bottom-1 z-[100] hidden text-custom-slate lg:block"
     >
       <div className="flex flex-col items-center space-y-7 text-xl">
         {SOCIAL_LINKS.map(({ id, link, logo: Logo }) => (

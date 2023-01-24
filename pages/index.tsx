@@ -21,7 +21,7 @@ const Home = ({ projects }: Props) => {
     <div>
       <Head>
         <title>Kolade Ayomide</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/fav.png" />
       </Head>
 
       <Header />

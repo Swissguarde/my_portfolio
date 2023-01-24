@@ -112,7 +112,11 @@ const Header = () => {
                 ease: "easeOut",
               }}
             >
-              <Link href="/koladeayomide.pdf" download="koladeayomide.pdf">
+              <Link
+                href="/koladeayomide.pdf"
+                download="koladeayomide.pdf"
+                target={"_blank"}
+              >
                 <button className="w-max rounded border border-[#64ffda] bg-transparent px-3 py-2 text-sm text-[#64ffda] transition-all hover:bg-[#57cbff]/10">
                   Resume
                 </button>

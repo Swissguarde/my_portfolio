@@ -64,11 +64,11 @@ const About = () => {
 
         <div className="relative mx-auto">
           <img
-            className="h-60 w-60 rounded-lg object-cover md:h-72 md:w-72"
-            src="/placeholder.jpg"
-            alt=""
+            className="h-60 w-60 cursor-pointer rounded-lg object-cover md:h-72 md:w-72"
+            src="/pfp2.jpg"
+            alt="profile_photo"
           />
-          <div className="absolute left-6 top-5 -z-10 h-60 w-60 rounded-lg border-2 border-light-teal md:h-72 md:w-72"></div>
+          <div className="absolute left-6 top-5 -z-10 h-60 w-60 rounded-lg border-2 border-light-teal md:h-72 md:w-72 "></div>
         </div>
       </div>
     </motion.div>
