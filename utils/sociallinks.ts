@@ -9,7 +9,7 @@ export const SOCIAL_LINKS = [
   {
     id: 4,
     logo: FiTwitter,
-    link: "https://twitter.com/swiss_45",
+    link: "https://twitter.com/swisssguard",
   },
   {
     id: 5,
