@@ -16,6 +16,7 @@ interface Props {
 
 const Home = ({ projects }: Props) => {
   const isOpen = useSelector(selectNavState);
+  console.log(projects);
 
   return (
     <div>

@@ -27,7 +27,7 @@ const Projects = ({ projects }: Props) => {
 
       <div className="mt-16">
         <div>
-          {projects.slice(0, 5).map((project) => {
+          {projects.map((project) => {
             const {
               _id,
               description,
