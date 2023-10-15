@@ -113,8 +113,8 @@ const Header = () => {
               }}
             >
               <Link
-                href="/koladeayomide.pdf"
-                download="koladeayomide.pdf"
+                href="/koladeayo.pdf"
+                download="koladeayo.pdf"
                 target={"_blank"}
               >
                 <button className="w-max rounded border border-[#64ffda] bg-transparent px-3 py-2 text-sm text-[#64ffda] transition-all hover:bg-[#57cbff]/10">
@@ -180,7 +180,7 @@ const Header = () => {
             </span>
             GitHub
           </Link>
-          <Link href="/koladeayomide.pdf" download="koladeayomide.pdf">
+          <Link href="/koladeayo.pdf" download="koladeayo.pdf">
             <button className="w-max rounded border border-light-teal bg-transparent px-10 py-3 text-base text-light-teal transition-all hover:bg-[#57cbff]/10">
               Resume
             </button>

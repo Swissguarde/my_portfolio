@@ -24,8 +24,7 @@ const Contact = () => {
           personally and professionally. I am committed to expanding my
           knowledge and experience to grow as a developer. I am not afraid to
           take on new roles or responsibilities, even if they are outside of my
-          comfort zone, as I believe that this is the best way to grow and
-          develop as a developer.
+          comfort zone.
         </p>
 
         <div className="mt-10">
